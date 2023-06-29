@@ -37,8 +37,14 @@ function displayMovies(movies){
         let movieRuntime = document.createElement("h4")
         movieRuntime.innerText = element.runtime
         div.appendChild(movieRuntime)
+
+        //Creating an element that shows the amount of tickets avaialble
+        let movieCapacity = document.createElement("h4")
+        movieCapacity.innerText = element.capacity
+        div.appendChild(movieCapacity)
         
         // Append the created div to the movieList div
         movieList.appendChild(div);
     });
 }
+

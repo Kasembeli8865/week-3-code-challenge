@@ -1,3 +1,32 @@
 body{
-    background-color: blanchedalmond;
+    background-image:url("anika-de-klerk-dWYjy9zIiF8-unsplash.jpg");
+}
+
+h1{
+    color: brown;
+}
+
+h3{
+    font-size: 3rem;
+    font-family: monospace;
+    color: red;
+    margin-left: 70rem;
+}
+
+h4{
+    margin-left: 70rem;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    color: blue;
+}
+
+img{
+    size: 0cap;
+    margin-left: 70rem;
+}
+
+nav{
+    margin-left: 80rem;
+    font-size: 3rem;
+    display: inline;
 }
