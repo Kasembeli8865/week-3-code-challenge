@@ -21,12 +21,46 @@ h4{
 }
 
 img{
-    size: 0cap;
-    margin-left: 70rem;
+   
+    margin-left: 70rem  
 }
 
-nav{
-    margin-left: 80rem;
-    font-size: 3rem;
-    display: inline;
+#MovieList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  size-adjust: 10rem;
+}
+  
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    text-align: center;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+  
+
+button{
+    margin-left: 100rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }

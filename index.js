@@ -30,21 +30,41 @@ function displayMovies(movies){
 
         // Create a time element for the movie and set its text content to the showtime value of the current movie object
         let movieTime = document.createElement("h4")
-        movieTime.innerText = element.showtime
+        movieTime.innerText ="Movie Time : "+ element.showtime
         div.appendChild(movieTime)
 
         // Create a runtime element for the movie and set its text content to the runtime value of the current movie object
         let movieRuntime = document.createElement("h4")
-        movieRuntime.innerText = element.runtime
+        movieRuntime.innerText ="Runtime : "+ element.runtime +" minutes"
         div.appendChild(movieRuntime)
 
         //Creating an element that shows the amount of tickets avaialble
         let movieCapacity = document.createElement("h4")
-        movieCapacity.innerText = element.capacity
+        movieCapacity.innerText = "Tickets available :" +element.capacity
         div.appendChild(movieCapacity)
         
+        //Creating a button to buy tickets
+        let buyTicket = document.createElement("button")
+        buyTicket.innerText = "Buy Ticket"
+        div.appendChild(buyTicket)
+
+       // buyTicket.addEventListener("click", reduceTicketCount(element))
+
         // Append the created div to the movieList div
         movieList.appendChild(div);
     });
 }
 
+function reduceTicketCount(movie) {
+    const data = {
+        ticketCount: 1
+    };
+   fetch(`http://localhost:3000/films/${movie}`, {
+    'method': 'PATCH',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+   });
+   
+}
