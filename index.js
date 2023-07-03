@@ -1,5 +1,3 @@
-//let buyTicket = document.getElementById("#button").addEventListener("click", purchase)
-
 // This function is responsible for fetching movie data from a local server and displaying it.
 function purchase(){
     // Fetch the data from the specified URL
@@ -40,31 +38,23 @@ function displayMovies(movies){
 
         //Creating an element that shows the amount of tickets avaialble
         let movieCapacity = document.createElement("h4")
-        movieCapacity.innerText = "Tickets available :" +element.capacity
+        movieCapacity.tickets = element.capacity - element.tickets_sold
+        movieCapacity.innerText = "Tickets available :" + movieCapacity.tickets
         div.appendChild(movieCapacity)
         
         //Creating a button to buy tickets
         let buyTicket = document.createElement("button")
         buyTicket.innerText = "Buy Ticket"
         div.appendChild(buyTicket)
+        buyTicket.addEventListener("click",movieCapacity)
 
-       // buyTicket.addEventListener("click", reduceTicketCount(element))
+        //Buy ticket f
+        buyTicket.addEventListener("click", () => {
+            if (movieCapacity.tickets > 0) {
+              movieCapacity.tickets--; // Reduce the ticket count
+              movieCapacity.innerText = "Tickets available: " + movieCapacity.tickets; // Update the displayed ticket count
+            }})
 
-        // Append the created div to the movieList div
         movieList.appendChild(div);
-    });
-}
-
-function reduceTicketCount(movie) {
-    const data = {
-        ticketCount: 1
-    };
-   fetch(`http://localhost:3000/films/${movie}`, {
-    'method': 'PATCH',
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
-   });
-   
-}
+    }
+    )}
