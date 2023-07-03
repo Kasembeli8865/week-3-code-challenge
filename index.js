@@ -46,9 +46,9 @@ function displayMovies(movies){
         let buyTicket = document.createElement("button")
         buyTicket.innerText = "Buy Ticket"
         div.appendChild(buyTicket)
-        buyTicket.addEventListener("click",movieCapacity)
+        
 
-        //Buy ticket f
+        //Buy ticket function
         buyTicket.addEventListener("click", () => {
             if (movieCapacity.tickets > 0) {
               movieCapacity.tickets--; // Reduce the ticket count
