@@ -7,7 +7,7 @@
 
  FLATDANGO is a movie app that allows users to view and purchase movie tickets. The app fetches movie data from a local server and displays it on the webpage. Users can see movie details such as title, poster, showtime, runtime, and the number of available tickets just by clicking the "Available Movies" button. They can also purchase tickets by clicking the "Buy Ticket" button.
 
- ## RINSTALLING FLATDANGO ON YOUR MACHINE
+ ## INSTALLING FLATDANGO ON YOUR MACHINE
  To run the FLATDANGO Movie App on your local machine, follow these steps:
 
 1. Clone this repository to your local machine or download the code as a ZIP file.
